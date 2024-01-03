@@ -1,13 +1,37 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .dice {
+            display: inline-block;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #fff;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
+<div class="dice">
+    <span th:text="${randomNumber}"></span>
+</div>
+
 
 </body>
 </html>
